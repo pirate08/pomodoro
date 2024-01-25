@@ -50,7 +50,7 @@ export default function Navbar() {
             <Flex alignItems={'center'} cursor={'pointer'}>
               <Image src='/logo.svg' width={40} height={30} />
               <Text as='b' fontSize='md'>
-                Dashtower
+                PirateProjects
               </Text>
             </Flex>
           </HStack>

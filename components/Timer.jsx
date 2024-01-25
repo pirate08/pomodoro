@@ -4,26 +4,26 @@ const Timer = () => {
   const [minutes, setMinutes] = useState(25);
   const [seconds, setSeconds] = useState(0);
 
-  useEffect(() => {
-    let clock = setInterval(() => {
-      clearInterval(clock);
-      setSeconds(seconds - 1);
+  // useEffect(() => {
+  //   let clock = setInterval(() => {
+  //     clearInterval(clock);
+  //     setSeconds(seconds - 1);
 
-      if (seconds === 0) {
-        if (minutes !== 0) {
-          setSeconds(59);
-          setMinutes(minutes - 1);
-        } else {
-          let minutes = 4;
-          let seconds = 59;
-          setMinutes(minutes);
-          setSeconds(seconds);
-        }
-      }
-    }, 1000);
+  //     if (seconds === 0) {
+  //       if (minutes !== 0) {
+  //         setSeconds(59);
+  //         setMinutes(minutes - 1);
+  //       } else {
+  //         let minutes = 4;
+  //         let seconds = 59;
+  //         setMinutes(minutes);
+  //         setSeconds(seconds);
+  //       }
+  //     }
+  //   }, 1000);
 
-    return () => clearInterval(clock);
-  });
+  //   return () => clearInterval(clock);
+  // });
 
   return (
     <div className='h-screen w-full bg-cyan-900 flex flex-col items-center justify-center px-3'>
@@ -35,7 +35,8 @@ const Timer = () => {
           {minutes < 10 ? '0' + minutes : minutes}:
           {seconds < 10 ? '0' + seconds : seconds}
         </div>
-        <div className='mt-4'>Hellos</div>
+        <div className='mt-4'></div>
+        <div></div>
       </div>
     </div>
   );
